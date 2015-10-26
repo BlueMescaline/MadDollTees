@@ -1,0 +1,168 @@
+2015-06-04 15:39:22 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\shirtshop\app\Controller\AppController.php, line 82]
+Trace:
+AppController::beforeFilter() - APP\Controller\AppController.php, line 82
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 676
+ExceptionRenderer::_getController() - CORE\Cake\Error\ExceptionRenderer.php, line 155
+ExceptionRenderer::__construct() - CORE\Cake\Error\ExceptionRenderer.php, line 92
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 118
+[main] - [internal], line ??
+
+2015-06-04 15:39:22 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\shirtshop\app\Controller\AppController.php, line 82]
+Trace:
+AppController::beforeFilter() - APP\Controller\AppController.php, line 82
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 676
+ExceptionRenderer::_getController() - CORE\Cake\Error\ExceptionRenderer.php, line 155
+ExceptionRenderer::__construct() - CORE\Cake\Error\ExceptionRenderer.php, line 92
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 118
+call_user_func - [internal], line ??
+ErrorHandler::handleFatalError() - CORE\Cake\Error\ErrorHandler.php, line 254
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 203
+call_user_func - [internal], line ??
+App::_checkFatalError() - CORE\Cake\Core\App.php, line 931
+App::shutdown() - CORE\Cake\Core\App.php, line 904
+[main] - [internal], line ??
+
+2015-06-04 15:39:57 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\shirtshop\app\Controller\AppController.php, line 82]
+Trace:
+AppController::beforeFilter() - APP\Controller\AppController.php, line 82
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 676
+ExceptionRenderer::_getController() - CORE\Cake\Error\ExceptionRenderer.php, line 155
+ExceptionRenderer::__construct() - CORE\Cake\Error\ExceptionRenderer.php, line 92
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 118
+[main] - [internal], line ??
+
+2015-06-04 15:39:57 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\shirtshop\app\Controller\AppController.php, line 82]
+Trace:
+AppController::beforeFilter() - APP\Controller\AppController.php, line 82
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 676
+ExceptionRenderer::_getController() - CORE\Cake\Error\ExceptionRenderer.php, line 155
+ExceptionRenderer::__construct() - CORE\Cake\Error\ExceptionRenderer.php, line 92
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 118
+call_user_func - [internal], line ??
+ErrorHandler::handleFatalError() - CORE\Cake\Error\ErrorHandler.php, line 254
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 203
+call_user_func - [internal], line ??
+App::_checkFatalError() - CORE\Cake\Core\App.php, line 931
+App::shutdown() - CORE\Cake\Core\App.php, line 904
+[main] - [internal], line ??
+
+2015-06-04 15:39:59 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\shirtshop\app\Controller\AppController.php, line 82]
+Trace:
+AppController::beforeFilter() - APP\Controller\AppController.php, line 82
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 676
+ExceptionRenderer::_getController() - CORE\Cake\Error\ExceptionRenderer.php, line 155
+ExceptionRenderer::__construct() - CORE\Cake\Error\ExceptionRenderer.php, line 92
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 118
+[main] - [internal], line ??
+
+2015-06-04 15:40:00 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\shirtshop\app\Controller\AppController.php, line 82]
+Trace:
+AppController::beforeFilter() - APP\Controller\AppController.php, line 82
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 676
+ExceptionRenderer::_getController() - CORE\Cake\Error\ExceptionRenderer.php, line 155
+ExceptionRenderer::__construct() - CORE\Cake\Error\ExceptionRenderer.php, line 92
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 118
+call_user_func - [internal], line ??
+ErrorHandler::handleFatalError() - CORE\Cake\Error\ErrorHandler.php, line 254
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 203
+call_user_func - [internal], line ??
+App::_checkFatalError() - CORE\Cake\Core\App.php, line 931
+App::shutdown() - CORE\Cake\Core\App.php, line 904
+[main] - [internal], line ??
+
+2015-06-04 15:40:08 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\shirtshop\app\Controller\AppController.php, line 82]
+Trace:
+AppController::beforeFilter() - APP\Controller\AppController.php, line 82
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 676
+ExceptionRenderer::_getController() - CORE\Cake\Error\ExceptionRenderer.php, line 155
+ExceptionRenderer::__construct() - CORE\Cake\Error\ExceptionRenderer.php, line 92
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 118
+[main] - [internal], line ??
+
+2015-06-04 15:40:08 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\shirtshop\app\Controller\AppController.php, line 82]
+Trace:
+AppController::beforeFilter() - APP\Controller\AppController.php, line 82
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 676
+ExceptionRenderer::_getController() - CORE\Cake\Error\ExceptionRenderer.php, line 155
+ExceptionRenderer::__construct() - CORE\Cake\Error\ExceptionRenderer.php, line 92
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 118
+call_user_func - [internal], line ??
+ErrorHandler::handleFatalError() - CORE\Cake\Error\ErrorHandler.php, line 254
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 203
+call_user_func - [internal], line ??
+App::_checkFatalError() - CORE\Cake\Core\App.php, line 931
+App::shutdown() - CORE\Cake\Core\App.php, line 904
+[main] - [internal], line ??
+
+2015-06-04 15:40:24 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\shirtshop\app\Controller\AppController.php, line 82]
+Trace:
+AppController::beforeFilter() - APP\Controller\AppController.php, line 82
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 676
+ExceptionRenderer::_getController() - CORE\Cake\Error\ExceptionRenderer.php, line 155
+ExceptionRenderer::__construct() - CORE\Cake\Error\ExceptionRenderer.php, line 92
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 118
+[main] - [internal], line ??
+
+2015-06-04 15:40:24 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\shirtshop\app\Controller\AppController.php, line 82]
+Trace:
+AppController::beforeFilter() - APP\Controller\AppController.php, line 82
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 676
+ExceptionRenderer::_getController() - CORE\Cake\Error\ExceptionRenderer.php, line 155
+ExceptionRenderer::__construct() - CORE\Cake\Error\ExceptionRenderer.php, line 92
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 118
+call_user_func - [internal], line ??
+ErrorHandler::handleFatalError() - CORE\Cake\Error\ErrorHandler.php, line 254
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 203
+call_user_func - [internal], line ??
+App::_checkFatalError() - CORE\Cake\Core\App.php, line 931
+App::shutdown() - CORE\Cake\Core\App.php, line 904
+[main] - [internal], line ??
+
+2015-06-04 15:40:27 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\shirtshop\app\Controller\AppController.php, line 82]
+Trace:
+AppController::beforeFilter() - APP\Controller\AppController.php, line 82
+PagesController::beforeFilter() - APP\Controller\PagesController.php, line 78
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 676
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 189
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2015-06-04 15:40:27 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\shirtshop\app\Controller\AppController.php, line 82]
+Trace:
+AppController::beforeFilter() - APP\Controller\AppController.php, line 82
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 676
+ExceptionRenderer::_getController() - CORE\Cake\Error\ExceptionRenderer.php, line 155
+ExceptionRenderer::__construct() - CORE\Cake\Error\ExceptionRenderer.php, line 92
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 118
+call_user_func - [internal], line ??
+ErrorHandler::handleFatalError() - CORE\Cake\Error\ErrorHandler.php, line 254
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 203
+call_user_func - [internal], line ??
+App::_checkFatalError() - CORE\Cake\Core\App.php, line 931
+App::shutdown() - CORE\Cake\Core\App.php, line 904
+[main] - [internal], line ??
+

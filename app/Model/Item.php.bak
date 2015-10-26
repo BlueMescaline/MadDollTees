@@ -1,0 +1,50 @@
+<?php
+App::uses('AppModel', 'Model');
+/**
+ * Item Model
+ *
+ */
+class Item extends AppModel {
+
+/**
+ * Validation rules
+ *
+ * @var array
+ */
+	public $validate = array(
+		'name' => array(
+			'alphaNumeric' => array(
+				'rule' => 'alphaNumeric',
+				'allowEmpty' => false,
+				'message' => 'Must be alphanumeric!',
+			),
+			'unique' => array(
+                'rule' => 'isUnique',
+                'message' => 'This name is taken.'
+            )
+		),
+		'description' => array(
+			'alphaNumeric' => array(
+				'rule' => 'alphaNumeric',
+				'message' => 'Must be alphanumeric!',
+				'allowEmpty' => true,
+				),
+		),
+		'price' => array(
+			'numeric' => array(
+				'rule' => 'numeric',
+				'message' => 'Just numeric characters!',
+				'allowEmpty' => false,
+			),
+		),
+		'image' => array(
+			'rule' => array(
+				'extension',
+				array('gif', 'jpeg', 'png', 'jpg')
+			),
+			'message' => 'Please supply a valid image.'
+			'allowEmpty' => false,
+	    )
+
+	);
+}
