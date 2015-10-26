@@ -6,7 +6,9 @@
         <?php echo $this->Paginator->sort('price'); ?>
     </div>
 
-    <div id="items">
+    <div id="items" style="-webkit-columns: 200px 4;
+                            -moz-columns: 200px 4;
+                            columns: 200px 4;">
 	<?php foreach ($items as $item): ?>
 
         <table>
