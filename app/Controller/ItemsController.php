@@ -83,7 +83,7 @@ class ItemsController extends AppController {
             $this->request->data['Item']['image']=$this->admin_imageUpload();
 			if ($this->Item->save($this->request->data) ) {
 				$this->Session->setFlash(__('The item has been saved.'));
-				return $this->redirect(array('action' => 'index'));
+				return $this->redirect(array('action' => 'index','admin'=>false));
 			} else {
 				$this->Session->setFlash(__('The item could not be saved. Please, try again.'));
 			}
