@@ -7,11 +7,17 @@ App::uses('AppModel', 'Model');
 class User extends AppModel {
     public $displayField = 'name';
 
-    public function beforeSave($options=array())
-    {
-        $this->data['User']['password']= AuthComponent::password($this->data['User']['password']);
-        return true;
+
+    public function beforeSave($options = array()) {
+    if(!empty($this->data['User']['password'])) {
+        $this->data['User']['password'] = AuthComponent::password($this->data['User']['password']);
+    } else {
+        unset($this->data['User']['password']);
     }
+    return true;
+}
+
+
 
 
 /**
@@ -35,6 +41,7 @@ class User extends AppModel {
             'Not empty'=>array(
                 'rule'=>'notEmpty',
                 'required' => 'false',
+                'on'        => 'create',  // we only need this validation on create
                 'message'=>'Please enter your password!',
             ),
             'Match paswords'=>array(
