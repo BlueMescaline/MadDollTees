@@ -151,7 +151,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
     </div>
 
-    ?>
+
 
 
 </body>

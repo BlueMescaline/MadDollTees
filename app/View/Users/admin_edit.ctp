@@ -5,8 +5,8 @@
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('username');
-		//echo $this->Form->input('password', array('required'=>false));
-        //echo $this->Form->input('password_confirmation',array('type'=>'password', 'required'=>false /*'default'=> $confirm*/));
+		//echo $this->Form->input('password');
+        //echo $this->Form->input('password_confirmation',array('type'=>'password'));
         echo $this->Form->input('status', array('options'=>array('active'=>'active','inactive'=>'inactive')));
 
         echo $this->Form->input('email');

@@ -21,11 +21,11 @@ class ItemsController extends AppController {
  *
  * @return void
  */
-    public function index() {
+	public function index() {
         if($this->Auth->user('user_type')==1) $this->view='admin_index';
-        $this->Item->recursive = 0;
-        $this->set('items', $this->Paginator->paginate());
-    }
+		$this->Item->recursive = 0;
+		$this->set('items', $this->Paginator->paginate());
+	}
 
     /**
      * search method
@@ -53,26 +53,25 @@ class ItemsController extends AppController {
  * @param string $id
  * @return void
  */
-    public function view($id = null) {
+	public function view($id = null) {
         if($this->Auth->user('user_type')==1) $this->view='admin_view';
 
         if (!$this->Item->exists($id)) {
-            throw new NotFoundException(__('Invalid item'));
-        }
-        $options = array('conditions' => array('Item.' . $this->Item->primaryKey => $id));
-        $this->set('item', $this->Item->find('first', $options));
+			throw new NotFoundException(__('Invalid item'));
+		}
+		$options = array('conditions' => array('Item.' . $this->Item->primaryKey => $id));
+		$this->set('item', $this->Item->find('first', $options));
 
         //Shirt sizes
         $sizes=array('s'=>'S',
-            'm'=>'M',
-            'l'=>'L',
-            'xl'=>'XL',
-            'xxl'=>'XXL');
+                    'm'=>'M',
+                    'l'=>'L',
+                    'xl'=>'XL',
+                    'xxl'=>'XXL');
         $this->set('sizes',$sizes);
-    }
+	}
 
-
-    /**
+/**
  * add method
  *
  * @return void
@@ -91,7 +90,7 @@ class ItemsController extends AppController {
 
 	}
 
-/**
+    /**
      * File upload method
      *
      * @return void
@@ -116,10 +115,7 @@ class ItemsController extends AppController {
             if (!move_uploaded_file($uploadData['tmp_name'], $uploadPath)) {
                 return false;
             }
-
             return $filename;
-
-
         }
         $this->set('image',$filename);
     }
@@ -138,7 +134,7 @@ class ItemsController extends AppController {
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Item->save($this->request->data)) {
 				$this->Session->setFlash(__('The item has been saved.'));
-				return $this->redirect(array('action' => 'index', 'admin'=>false));
+				return $this->redirect(array('action' => 'index','admin'=>false));
 			} else {
 				$this->Session->setFlash(__('The item could not be saved. Please, try again.'));
 			}

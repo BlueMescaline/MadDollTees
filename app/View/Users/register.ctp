@@ -27,6 +27,7 @@
 
     </fieldset>
     <?php echo $this->Form->end(__('Register')); ?>
+    
 </div>
 
 <script type="text/javascript">

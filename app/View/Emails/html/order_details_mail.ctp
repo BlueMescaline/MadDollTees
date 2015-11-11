@@ -1,4 +1,6 @@
-    <h1>Hello!</h1>
+<img src="cid:logo" alt='MadDollTees' name='logo'/>
+
+<h1>Hello!</h1>
 <p>Your order has saved. You will get another mail from us, if we sent you, your package.</p>
 
 <h2>Order details:</h2>

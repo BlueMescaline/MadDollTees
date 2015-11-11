@@ -1,3 +1,4 @@
+<img src="cid:logo" alt='MadDollTees' name='logo'/>
 <h1>Hello!</h1>
 <p>Please click on the link below to activate your account!</p>
 

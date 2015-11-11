@@ -45,7 +45,6 @@ class EmailConfig {
         'username' => 'maddolltees@gmail.com',
         'password' => 'EgyKettoHarom*4',
         'transport' => 'Smtp',
-
     );
 
 	public $default = array(

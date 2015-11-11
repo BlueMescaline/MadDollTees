@@ -5,11 +5,11 @@
         <?php echo $this->Paginator->sort('name'); ?>&nbsp;
         <?php echo $this->Paginator->sort('price'); ?>
     </div>
-
+        <!-- limit items to 4 culomns -->
     <div id="items" style="-webkit-columns: 200px 4;
                             -moz-columns: 200px 4;
                             columns: 200px 4;">
-	<?php foreach ($items as $item): ?>
+        <?php foreach ($items as $item): ?>
 
         <table>
         <tr>

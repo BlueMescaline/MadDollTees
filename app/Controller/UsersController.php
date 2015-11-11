@@ -1,8 +1,6 @@
 <?php
 App::uses('AppController', 'Controller');
 App::uses('CakeEmail', 'Network/Email');
-
-
 /**
  * Users Controller
  *
@@ -175,7 +173,7 @@ public function register(){
 		}
 }
 //////////////////////////////////////////
-        public function index()
+/*        public function index()
         {
             //validate captcha on form submission
             if ( $this->request->is('Post') )
@@ -192,7 +190,7 @@ public function register(){
                     $this->redirect(array('action' => 'index'));
             }
         }
-
+*/
     public function get_captcha()
     {
         $this->autoRender = false;
@@ -263,6 +261,13 @@ public function sendMail($mailto, $template, $subject, $code, $user_id){
     $Email->emailFormat('html');
     $Email->to($mailto);
     $Email->template($template)->viewVars(array('code'=>$code, 'id'=>$user_id));
+    $Email->attachments(array(
+        'maillogo.png' => array(
+            'file' => WWW_ROOT.'/img/maillogo.png',
+            'mimetype'=>'image/png',
+            'contentId' => 'logo'
+            )
+        ));
     $Email->subject($subject);
     $Email->replyTo('maddoltees@gmail.com');
     $Email->from ('maddolltees@gmail.com');
