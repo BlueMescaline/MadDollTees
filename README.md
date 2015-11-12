@@ -1,2 +1,5 @@
 #MadDollTees
- Thi is my first project built in CakePHP and it isn't complete yet.
+ Thi is my first project built in CakePHP.
+ 
+ Actually it is not finished yet, texts and images are only to illustrate.
+ 
