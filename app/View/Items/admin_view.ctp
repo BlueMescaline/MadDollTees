@@ -46,6 +46,6 @@
                 array('action' => 'delete', $item['Item']['id'], 'admin'=>true),
                 array(), __('Are you sure you want to delete  %s?', $item['Item']['name'])); ?> </li>
         <li><?php echo $this->Html->link(__('List Items'), array('action' => 'index')); ?> </li>
-        <li><?php echo $this->Html->link(__('New Item'), array('action' => 'add')); ?> </li>
+        <li><?php echo $this->Html->link(__('New Item'), array('action' => 'add',  'admin'=>true)); ?> </li>
     </ul>
 </div>

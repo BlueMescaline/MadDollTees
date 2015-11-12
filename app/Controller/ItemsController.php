@@ -132,6 +132,11 @@ class ItemsController extends AppController {
 			throw new NotFoundException(__('Invalid item'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
+            //if the file upload field is empty, we unset this variable, so the image stays the same
+           // if (empty($this->request->data['Item']['image'])) unset($this->request->data['Item']['image']);
+                 $this->request->data['Item']['image'] = $this->admin_imageUpload();
+
+
 			if ($this->Item->save($this->request->data)) {
 				$this->Session->setFlash(__('The item has been saved.'));
 				return $this->redirect(array('action' => 'index','admin'=>false));
@@ -141,6 +146,8 @@ class ItemsController extends AppController {
 		} else {
 			$options = array('conditions' => array('Item.' . $this->Item->primaryKey => $id));
 			$this->request->data = $this->Item->find('first', $options);
+            $this->set('pic',$this->request->data['Item']['image']);
+
 		}
 	}
 
