@@ -13,44 +13,36 @@ class Item extends AppModel {
  */
 	public $validate = array(
 		'name' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
+            'allowEmpty' => false,
+            'required' => true,
+            'rule' => array('custom','/[a-zA-Z0-9 ]/'),
+            'message' => 'Only alphabets and numbers allowed',
 		),
 		'description' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
+            'rule' => array('custom', '/^[\w\-\s,.]+$/'),
+            'allowEmpty' => true,
+            'message' => 'Only alphanumeric , . and space allowed',
 		),
 		'price' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'image' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				'allowEmpty' => true,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-	);
+			'rule' => array('numeric'),
+			'allowEmpty' => false,
+			'required' => true,
+            'message' => 'Only numbers allowed',
+        ),
+        'image' => array(
+            'rule1'=> array(
+                'rule' => array('extension',array('jpeg','jpg','png','gif')),
+                'required' => 'create',
+                'allowEmpty' => true,
+                'message' => 'Select Valid Image',
+                'on' => 'create',
+                'last'=> true
+            ),
+            'rule2'=>array(
+                'rule' => array('extension',array('jpeg','jpg','png','gif')),
+                'message' => 'Select Valid Image',
+                'on' => 'update',
+            ),
+        ),
+    );
 }

@@ -166,3 +166,100 @@ App::_checkFatalError() - CORE\Cake\Core\App.php, line 931
 App::shutdown() - CORE\Cake\Core\App.php, line 904
 [main] - [internal], line ??
 
+2016-02-05 21:27:05 Debug: Notice (8): Undefined variable: pic in [C:\wamp\www\shirtshop\app\View\Items\admin_edit.ctp, line 12]
+Trace:
+include - APP\View\Items\admin_edit.ctp, line 12
+View::_evaluate() - CORE\Cake\View\View.php, line 961
+View::_render() - CORE\Cake\View\View.php, line 923
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 959
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2016-02-05 21:27:05 Debug: Notice (8): Undefined variable: pic in [C:\wamp\www\shirtshop\app\View\Items\admin_edit.ctp, line 13]
+Trace:
+include - APP\View\Items\admin_edit.ctp, line 13
+View::_evaluate() - CORE\Cake\View\View.php, line 961
+View::_render() - CORE\Cake\View\View.php, line 923
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 959
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2016-02-05 21:29:34 Debug: Notice (8): Undefined variable: pic in [C:\wamp\www\shirtshop\app\View\Items\admin_edit.ctp, line 12]
+Trace:
+include - APP\View\Items\admin_edit.ctp, line 12
+View::_evaluate() - CORE\Cake\View\View.php, line 961
+View::_render() - CORE\Cake\View\View.php, line 923
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 959
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2016-02-05 21:29:34 Debug: Notice (8): Undefined variable: pic in [C:\wamp\www\shirtshop\app\View\Items\admin_edit.ctp, line 13]
+Trace:
+include - APP\View\Items\admin_edit.ctp, line 13
+View::_evaluate() - CORE\Cake\View\View.php, line 961
+View::_render() - CORE\Cake\View\View.php, line 923
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 959
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2016-02-05 21:29:44 Debug: Notice (8): Undefined variable: pic in [C:\wamp\www\shirtshop\app\View\Items\admin_edit.ctp, line 12]
+Trace:
+include - APP\View\Items\admin_edit.ctp, line 12
+View::_evaluate() - CORE\Cake\View\View.php, line 961
+View::_render() - CORE\Cake\View\View.php, line 923
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 959
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2016-02-05 21:29:44 Debug: Notice (8): Undefined variable: pic in [C:\wamp\www\shirtshop\app\View\Items\admin_edit.ctp, line 13]
+Trace:
+include - APP\View\Items\admin_edit.ctp, line 13
+View::_evaluate() - CORE\Cake\View\View.php, line 961
+View::_render() - CORE\Cake\View\View.php, line 923
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 959
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2016-02-05 21:31:15 Debug: Notice (8): Undefined variable: pic in [C:\wamp\www\shirtshop\app\View\Items\admin_edit.ctp, line 12]
+Trace:
+include - APP\View\Items\admin_edit.ctp, line 12
+View::_evaluate() - CORE\Cake\View\View.php, line 961
+View::_render() - CORE\Cake\View\View.php, line 923
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 959
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2016-02-05 21:31:15 Debug: Notice (8): Undefined variable: pic in [C:\wamp\www\shirtshop\app\View\Items\admin_edit.ctp, line 13]
+Trace:
+include - APP\View\Items\admin_edit.ctp, line 13
+View::_evaluate() - CORE\Cake\View\View.php, line 961
+View::_render() - CORE\Cake\View\View.php, line 923
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 959
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2016-02-18 22:28:13 Debug: Notice (8): Undefined index:  in [C:\wamp\www\shirtshop\app\Controller\ShopController.php, line 88]
+Trace:
+ShopController::order() - APP\Controller\ShopController.php, line 88
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+

@@ -43,7 +43,7 @@ class EmailConfig {
         'host' => 'ssl://smtp.gmail.com',
         'port' => 465,
         'username' => 'maddolltees@gmail.com',
-        'password' => 'EgyKettoHarom*4',
+        'password' => 'ShirtShop*125',
         'transport' => 'Smtp',
     );
 

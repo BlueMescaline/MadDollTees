@@ -15,15 +15,12 @@
             'dateFormat' => 'DMY',
             'minYear' => date('Y') - 5,
             'maxYear' => date('Y') - 50,
-            'default'=>'minYear',
-
-        ));
-
-
+            'default'=>'minYear',)
+        );
         echo $this->Form->input('user_type', array('options' => array('0'=>'User', '1'=>'Admin', ))); ?>
-
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
+
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>

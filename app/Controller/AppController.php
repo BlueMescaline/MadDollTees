@@ -34,6 +34,8 @@ class AppController extends Controller {
     public $helpers=array('Html','Form','Session');
     public $components=array('Session','Auth');
 
+
+
     public function beforeRender(){
         if($this->Auth->user('user_type')==1){
               $this->layout='admin';
@@ -42,9 +44,6 @@ class AppController extends Controller {
             $this->layout='default';
         }
     }
-
-
-
 
     public function beforeFilter() {
         if ($this->request->prefix == 'admin') {
@@ -67,8 +66,6 @@ class AppController extends Controller {
             $this->Auth->allow();
             $this->layout = 'default';
         }
-
-
         $this->set('logged_in', $this->Auth->loggedIn());
         $this->set('current_user', $this->Auth->user());
 
@@ -82,10 +79,9 @@ class AppController extends Controller {
 
         public function checkUserRole($user_type){
         if($user_type==1){
-            $this->layout = 'admin';
+            $this->layout = 'admin';x
         }
     }
 */
-
 }
 

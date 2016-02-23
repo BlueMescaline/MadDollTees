@@ -7,7 +7,6 @@
 <table border="1">
     <tr><td>
             <?php
-
             echo $order['0']['Order']['first_name'].' '.$order['0']['Order']['last_name'].'<br/>';
             echo $order['0']['Order']['email'].'<br/>';
             echo $order['0']['Order']['phone'].'<br/>';
@@ -21,7 +20,7 @@
         </td>
         </tr>
     </table>
-
+<h2>Ordered Products:</h2>
             <table width="500px" border="1">
                 <tr>
                     <th>Name</th>
@@ -30,9 +29,8 @@
                     <th>Price</th>
                     <th>Subtotal</th>
                 </tr>
-                    <?php foreach ($order as $details){ ?>
+                <?php foreach ($order as $details){ ?>
                 <tr>
-
                     <td><?php echo $details['OrderItem']['name']?></td>
                     <td><?php echo $details['OrderItem']['size']?></td>
                     <td><?php echo $details['OrderItem']['quantity']?></td>

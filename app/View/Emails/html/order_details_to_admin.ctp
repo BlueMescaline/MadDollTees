@@ -20,7 +20,7 @@
         </td>
     </tr>
 </table>
-
+<h2>Ordered Products:</h2>
 <table width="500px" border="1">
     <tr>
         <th>Name</th>
@@ -29,6 +29,7 @@
         <th>Price</th>
         <th>Subtotal</th>
     </tr>
+    Ordered Items
     <?php foreach ($order as $details){ ?>
     <tr>
 

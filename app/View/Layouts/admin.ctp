@@ -44,6 +44,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         <h1><?php echo $this->Html->link('Items', array('admin' => false,'controller'=>'items','action'=>'index')).'||';
             echo $this->Html->link('Users', array('admin' => true, 'controller'=>'users','action'=>'index')).'||';
             echo $this->Html->link('Orders', array('admin' => true, 'controller'=>'orders','action'=>'index')).'||';
+            echo $this->Html->link('Newsletter addresses', array('admin' => true, 'controller'=>'newsletters','action'=>'index')).'||';
 
             ?>
 

@@ -24,10 +24,6 @@
             <td><?php echo h($item['Item']['price']); ?> &euro;</td></tr>
     </table>
 
-
-
-
-
     <?php endforeach; ?>
 </div>
 	<p>

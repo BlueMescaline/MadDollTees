@@ -6,8 +6,10 @@ class Cart extends AppModel {
 
     public $useTable = false;
 
-    /*
-     * add a product to cart
+    /**
+     * The function add the current intem`s id and size of it, to an assoc. array (the cart)
+     * @param $item_id
+     * @param $size
      */
     public function addItem($item_id,$size) {
         $allItems = $this->readItem();
@@ -16,51 +18,46 @@ class Cart extends AppModel {
                     $allItems[$item_id][$size]++;
             }
             else {
-                    $allItems[$item_id][$size]=1;
-                }
+                $allItems[$item_id][$size]=1;
+            }
         }
-        else{
+        else {
             $allItems[$item_id][$size]=1;
-
         }
         $this->saveItem($allItems);
     }
-    /*
-     * get total count of products
+
+    /**Returns the number of items in the cart
+     * @return int
      */
-
-
     public function getCount() {
         $allItems = $this->readItem();
-
         if (count($allItems)<1) {
             return 0;
         }
-
         $count = 0;
         foreach ($allItems as $item) {
             foreach ($item as $countOfSize) {
-
                 $count=$count+$countOfSize;
             }
         }
-
         return $count;
     }
 
-
-    /*
-     * save data to session
+    /**
+     * Gets $data and save(write) it into session
+     * @param $data
+     * @return bool
      */
     public function saveItem($data) {
         return CakeSession::write('cart',$data);
     }
 
-    /*
-     * read cart data from session
+    /**
+     * Read cart data from session variable
+     * @return mixed
      */
     public function readItem() {
         return CakeSession::read('cart');
     }
-
 }

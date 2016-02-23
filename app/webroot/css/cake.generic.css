@@ -482,6 +482,17 @@ form .submit input[type=submit]:hover {
     color: #FFF;
     background: none repeat scroll 0% 0% #F45B4F;
 }
+#signup-button input[type=submit]  {
+    border-radius: 2px;
+    box-shadow: none;
+    display: inline-block;
+    line-height: 25px;
+    border: medium none;
+    margin: 0px;
+    padding: 0px 5px;
+    text-transform: none;
+    height: 150px;
+}
 
 
 /* Form errors */
@@ -960,3 +971,20 @@ h2.price{
 #ItemSearchForm{
     display: inline-table;
 }
+
+#contact{
+    float: left;
+}
+#contact ul {
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+#contact ul li{
+    padding-bottom: 10px;
+
+}
+
+
+
+
+

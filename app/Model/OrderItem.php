@@ -3,37 +3,15 @@ App::uses('AppModel', 'Model');
 class OrderItem extends AppModel {
 
 //////////////////////////////////////////////////
-
     public $validate = array(
         'order_id' => array(
-            'numeric' => array(
-                'rule' => array('numeric'),
-                //'message' => 'Your custom message here',
-                //'allowEmpty' => false,
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
-            ),
+            'rule' => 'numeric',
         ),
         'name' => array(
-            'notempty' => array(
-                'rule' => array('notempty'),
-                //'message' => 'Your custom message here',
-                //'allowEmpty' => false,
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
-            ),
+            'rule' => array('custom', '/[a-z0-9.,\/ ]/'),
         ),
         'quantity' => array(
-            'numeric' => array(
-                'rule' => array('numeric'),
-                //'message' => 'Your custom message here',
-                //'allowEmpty' => false,
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
-            ),
+            'rule' => 'numeric',
         ),
     );
 
@@ -50,7 +28,5 @@ class OrderItem extends AppModel {
             'counterScope' => array(),
         )
     );
-
 //////////////////////////////////////////////////
-
 }

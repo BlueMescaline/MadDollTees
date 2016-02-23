@@ -10,7 +10,6 @@
     <tr><td>
 <?php
 $order=$this->Session->read('order');
-
             echo $order['0']['Order']['first_name'].' '.$order['0']['Order']['last_name'].'<br/>';
             echo $order['0']['Order']['email'].'<br/>';
             echo $order['0']['Order']['phone'].'<br/>';
@@ -21,11 +20,10 @@ $order=$this->Session->read('order');
             echo $order['0']['Order']['state_province'].'<br/>';
             echo $order['0']['Order']['country'].'<br/>';
 ?>
-
         </td>
     </tr>
 </table>
-
+<h2>Ordered products:</h2>
             <table width="500px" border="1">
                 <tr>
                     <th>Name</th>

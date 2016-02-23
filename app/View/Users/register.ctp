@@ -1,6 +1,5 @@
 <div class="users form">
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
     <?php
      echo $this->Session->flash();
      echo $this->Form->create('User'); ?>
@@ -21,23 +20,18 @@
             'default'=>'minYear',
         ));
         echo $this->Form->input('captcha');
-        echo $this->Html->image(array('controller' => 'users', 'action' => 'get_captcha'),array('id' => 'captcha_image')).'</br>';
-        echo $this->Html->link('Reload Captcha', 'javascript:void(0);',array('id' => 'reload'));
+        echo $this->Html->image(array('controller' => 'users', 'action' => 'get_captcha'), array('id' => 'captcha_image')).'</br>';
+        echo $this->Html->link('Reload Captcha', 'javascript:void(0);', array('id' => 'reload'));
         ?>
-
     </fieldset>
     <?php echo $this->Form->end(__('Register')); ?>
-    
 </div>
-
 <script type="text/javascript">
     $(document).ready(function(){
-
         $('#reload').click(function() {
             var captcha = $("#captcha_image");
             captcha.attr('src', captcha.attr('src')+'?'+Math.random());
             return false;
         });
-
     });
 </script>

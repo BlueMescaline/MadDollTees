@@ -29,8 +29,8 @@ class ItemsController extends AppController {
 
     /**
      * search method
+     * search in item names by letter or keyword
      *
-     * @param string $search
      */
     //Search is working, but ORDERING doesn`t.
     //Ha Név/ár szerint akarom a keresést rendezni akkor az items/search lapot akarja, nem az items/index-et
@@ -39,7 +39,7 @@ class ItemsController extends AppController {
             $search=$this->data['Item']['name'];
         //    $data = $this->Item->find('all',array('order'=>'name','conditions'=>array('name LIKE'=>'%'.$search.'%')));
             $this->Item->recursive = 0;
-            $data = $this->Paginator->paginate('Item',array('name LIKE'=>'%'.$search.'%'));
+            $data = $this->Paginator->paginate('Item', array('name LIKE' => '%'.$search.'%'));
 
             $this->set('items',$data);
             $this->render('index');
@@ -55,13 +55,11 @@ class ItemsController extends AppController {
  */
 	public function view($id = null) {
         if($this->Auth->user('user_type')==1) $this->view='admin_view';
-
         if (!$this->Item->exists($id)) {
 			throw new NotFoundException(__('Invalid item'));
 		}
 		$options = array('conditions' => array('Item.' . $this->Item->primaryKey => $id));
 		$this->set('item', $this->Item->find('first', $options));
-
         //Shirt sizes
         $sizes=array('s'=>'S',
                     'm'=>'M',
@@ -73,50 +71,45 @@ class ItemsController extends AppController {
 
 /**
  * add method
- *
+ * only for users with admin premission. Creates and saves a new Item in the database.
  * @return void
  */
 	public function admin_add() {
 		if ($this->request->is('post')) {
 			$this->Item->create();
-            $this->request->data['Item']['image']=$this->admin_imageUpload();
+            $this->request->data['Item']['image'] = $this->admin_imageUpload();
 			if ($this->Item->save($this->request->data) ) {
 				$this->Session->setFlash(__('The item has been saved.'));
-				return $this->redirect(array('action' => 'index','admin'=>false));
+				return $this->redirect(array('action' => 'index', 'admin'=>false));
 			} else {
 				$this->Session->setFlash(__('The item could not be saved. Please, try again.'));
 			}
 		}
-
 	}
 
-    /**
-     * File upload method
-     *
-     * @return void
-     */
-    public function admin_imageUpload()
-    {
+ /**
+  * File upload method
+  * Gets the file's base name, and add timestamp to it, to be unique and move file to the default IMAGES folder
+  * If there is no file to upload, nothing happen.
+  * @return void
+  */
+    public function admin_imageUpload(){
         $filename='';
-        if ($this->request->is('post'))
-        { // checks for the post values
-            $uploadData = $this->request->data['Item']['image'];
-            if ( $uploadData['size'] == 0 || $uploadData['error'] !== 0)
-            { // checks for the errors and size of the uploaded file
-                return false;
-            }
-            $filename = basename($uploadData['name']); // gets the base name of the uploaded file
-            $uploadFolder = IMAGES;  // path where the uploaded file has to be saved
-            $filename = time() .'_'. $filename; // adding time stamp for the uploaded image for uniqueness
-            $uploadPath =  $uploadFolder . DS . $filename;
-            if( !file_exists($uploadFolder) ){
-                mkdir($uploadFolder); // creates folder if  not found
-            }
-            if (!move_uploaded_file($uploadData['tmp_name'], $uploadPath)) {
-                return false;
-            }
-            return $filename;
+        $uploadData = $this->request->data['Item']['image'];
+        if ( $uploadData['size'] == 0 || $uploadData['error'] !== 0){
+            return "";
         }
+        $filename = basename($uploadData['name']); // gets the base name of the uploaded file
+        $uploadFolder = IMAGES;  // path where the uploaded file has to be saved
+        $filename = time() .'_'. $filename; // adding time stamp for the uploaded image for uniqueness
+        $uploadPath =  $uploadFolder . DS . $filename;
+        if( !file_exists($uploadFolder) ){
+            mkdir($uploadFolder); // creates folder if  not found
+        }
+        if (!move_uploaded_file($uploadData['tmp_name'], $uploadPath)) {
+            return false;
+        }
+        return $filename;
         $this->set('image',$filename);
     }
 
@@ -132,14 +125,16 @@ class ItemsController extends AppController {
 			throw new NotFoundException(__('Invalid item'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
-            //if the file upload field is empty, we unset this variable, so the image stays the same
-           // if (empty($this->request->data['Item']['image'])) unset($this->request->data['Item']['image']);
-                 $this->request->data['Item']['image'] = $this->admin_imageUpload();
+            $this->request->data['Item']['image'] = $this->admin_imageUpload();
 
-
-			if ($this->Item->save($this->request->data)) {
+            if (empty($this->request->data['Item']['image'])){
+                $item= $this->Item->findById($id);
+                $kep=$item['Item']['image'];
+                $this->request->data['Item']['image']=$kep;
+            }
+            if ($this->Item->save($this->request->data)) {
 				$this->Session->setFlash(__('The item has been saved.'));
-				return $this->redirect(array('action' => 'index','admin'=>false));
+				return $this->redirect(array('action' => 'index', 'admin' => false));
 			} else {
 				$this->Session->setFlash(__('The item could not be saved. Please, try again.'));
 			}
@@ -147,7 +142,6 @@ class ItemsController extends AppController {
 			$options = array('conditions' => array('Item.' . $this->Item->primaryKey => $id));
 			$this->request->data = $this->Item->find('first', $options);
             $this->set('pic',$this->request->data['Item']['image']);
-
 		}
 	}
 
@@ -161,32 +155,25 @@ class ItemsController extends AppController {
 	public function admin_delete($id = null) {
 		$this->Item->id = $id;
         $data=$this->Item->findById($id);
-
 		if (!$id || !$this->Item->exists()) {
 			throw new NotFoundException(__('ID was not set.'));
 		}
-        if($this->request->is('post'))
-        {
+        if($this->request->is('post')) {
             $this->request->allowMethod('post', 'delete');
             $filename=$data['Item']['image'];
             $file= new File(IMAGES.DS.$filename);
-
 		    if ($this->Item->delete() && $file->delete()) {
-			$this->Session->setFlash(__('The item has been deleted.'));
+			    $this->Session->setFlash(__('The item has been deleted.'));
 		    } else {
 			$this->Session->setFlash(__('The item could not be deleted. Please, try again.'));
-		}
+            }
         }
 		return $this->redirect(array('action' => 'index', 'admin'=>false));
-
 	}
 
-  public function beforeFilter()
-    {
+    public function beforeFilter() {
         parent::beforeFilter();
-
-}
-
+    }
 }
 Router::connect('/about', array('controller' => 'pages', 'action' => 'display', 'about'));
 Router::connect('/about', array('controller' => 'pages', 'action' => 'display', 'about'));

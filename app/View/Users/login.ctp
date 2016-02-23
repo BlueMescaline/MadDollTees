@@ -2,7 +2,6 @@
 <table>
     <td>
 <div class="users form">
-
     <?php echo $this->Form->create('User'); ?>
     <fieldset>
         <legend>
@@ -14,13 +13,10 @@
         ?>
     </fieldset>
     <?php echo $this->Form->end(__('Login')); ?>
-
-
 </div>
 </td>
 <td>
     <div class="users form">
-
    <h2><?php echo $this->Html->link('Register now!', array('controller'=>'users', 'action'=>'register'))?></h2>
         </div>
 </td>
